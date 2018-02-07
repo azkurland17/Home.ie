@@ -1,8 +1,36 @@
 <html>
-<head>
-	<title>Homeie</title>
-</head>
-<body>
-	<h1>Yo this is the homepage</h1>
-</body>
+    <head>
+	      <title>Home.ie</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        {{#css}}
+        <link rel="stylesheet" href="{{../public/css/index.css}}">
+        {{/css}}
+    </head>
+    <body>
+        <h1>Welcome to Home.ie</h1>
+        <div class="nav_bar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="contact.asp">Stats</a></li>
+                <li><a href="about.asp">Expense</a></li>
+            </ul>
+        </div>
+        <div class="chores">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <p>Wash Dishes</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <p>Sweep</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <p>Counters</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
 </html>
