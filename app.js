@@ -10,9 +10,11 @@ var handlebars = require('express3-handlebars')
 //Route files
 var index = require('./routes/index');
 var chore = require('./routes/chore');
-var app = express();
+var expense = require('./routes/expense');
+var stats = require('./routes/stats');
 
 // all environments
+var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
@@ -25,7 +27,7 @@ app.use(express.methodOverride());
 app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // development only
 if ('development' == app.get('env')) {
@@ -35,6 +37,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/chore', chore.view);
+app.get('/expense', expense.view);
+app.get('/stats', stats.view);
 // Example route
 // app.get('/users', user.list);
 

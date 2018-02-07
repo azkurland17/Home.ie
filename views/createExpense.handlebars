@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Create a Chore</title>
+	<title>Create an Expense</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -9,14 +9,14 @@
 <body>
 	<div class="container">
 	<form id="signup" data-name="signup" aria-hidden="false" onSubmit={this.handleSubmit}>
-        <legend><h1>Create a Chore</h1></legend>
+        <legend><h1>Create an Expense</h1></legend>
         <div class="form-group">
-            <label for="name">Name of chore</label>
-            <input id="name" class="form-control" name="name" placeholder="wash the dishes" />
+            <label for="name">Name of Expense</label>
+            <input id="name" class="form-control" name="name" placeholder="garbage bags" />
         </div>
         <div class="form-group">
             <label for="descripton">Description</label>
-            <input class="form-control" name="descripton" type="text" placeholder="If you are going to use the dish washer to clean the dishes make sure to rinse or scrub atleast a bit before placing in dishwasher!" />
+            <input class="form-control" name="descripton" type="text" placeholder="don't get mad, get Glad!!" />
         </div>
         <div class="form-group">
             <label for="priority">Priority</label>
@@ -24,15 +24,15 @@
             <input 
                 type="radio" 
                 name="low" 
-                /> low<br/>
+                /> Fully Stocked<br/>
             <input 
                 type="radio" 
                 name="med" 
-                /> med<br/>
+                /> Running low<br/>
             <input 
                 type="radio" 
                 name="hi" 
-                /> hi<br/>
+                /> Out!!<br/>
         </div>
         
         <div class="form-group">
