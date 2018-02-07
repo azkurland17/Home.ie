@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Create a Chore</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/form.css">
+</head>
+<body>
+	<div class="container">
+	<form id="signup" data-name="signup" aria-hidden="false" onSubmit={this.handleSubmit}>
+        <legend><h1>Create a Chore</h1></legend>
+        <div class="form-group">
+            <label for="name">Name of chore</label>
+            <input id="name" class="form-control" name="name" placeholder="wash the dishes" />
+        </div>
+        <div class="form-group">
+            <label for="descripton">Description</label>
+            <input class="form-control" name="descripton" type="text" placeholder="If you are going to use the dish washer to clean the dishes make sure to rinse or scrub atleast a bit before placing in dishwasher!" />
+        </div>
+        
+        <div class="form-group">
+            <input class="btn btn-default" type="reset" value="Reset" />
+            <input class="btn btn-secondary" type="submit" value="Sign Up" />
+        </div>
+    </form>
+    </div>
+</body>
+</html>

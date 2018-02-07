@@ -2,16 +2,14 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
+//Route files
 var index = require('./routes/index');
-// Example route
-// var user = require('./routes/user');
-
+var chore = require('./routes/chore');
 var app = express();
 
 // all environments
@@ -33,8 +31,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
+//might need to add a production code as well
 
 app.get('/', index.view);
+app.get('/chore', chore.view);
 // Example route
 // app.get('/users', user.list);
 
