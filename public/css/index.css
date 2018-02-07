@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+}
+.nav_bar{
+    width:100%;
+    height:50px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    float:left;
+    margin:10px;
+}
+.chore, .add{
+    padding:1%;
+    border:solid 1px gray;
+}
+.add button{
+    height:55px;
+}
