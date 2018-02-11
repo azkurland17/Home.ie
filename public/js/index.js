@@ -5,9 +5,9 @@ $(document).ready(function() {
 })
 
 function initializePage(){
-    $(".chore img").hide();
+   $(".chore img").hide();
     $(".expand").click(function(e){
         e.preventDefault();
-        $(".chore img").show();
+        $(this).parent().parent().find('img').toggle();
     })
 }

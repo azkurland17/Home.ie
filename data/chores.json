@@ -4,7 +4,7 @@
 			"name": "Wash Dishes",
 			"description": "Make sure to rinse the dishes before putting them in the dishwasher",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg",
-			"priority": "low"
+			"priority": "high"
 		},
 		{
 			"name": "Take out the trash",
@@ -16,7 +16,7 @@
 			"name": "vacum the house",
 			"description": "Alwasy empty the vac after you use it!!",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg",
-			"priority": "low"
+			"priority": "medium"
 		},
 		{
 			"name": "Cut the grass",
