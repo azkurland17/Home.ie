@@ -1,33 +1,49 @@
 <html>
     <head>
 	      <title>Home.ie</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/index.js"></script>
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
         <h1>Welcome to Home.ie</h1>
-        <div class="nav_bar">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/stats">Stats</a></li>
-                <li><a href="/expense">Expense</a></li>
-            </ul>
-        </div>
         <div class="chores">
             <div class="container">
+                <div class="row nav_bar">
+                    <div class="col-sm-6">
+                        <div class="nav">
+                                <a href="/">Chores</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="nav">
+                                <a href="/expense">Expense</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
-                    <div class="chore col-md-4">
-                        <p>Wash Dishes</p>
+                    {{#each chores}}
+                    <div class="chore col-md-6">
+                        <h2>{{name}}</h2>
+                        <p>{{description}}</p>
+                        <button class="green" type="button">{{priority}}</button>
+                        <img src="{{imageULR}}">
+                    </div>
+                    {{/each}}
+                    <div class="chore col-md-6">
+                        <h2>Sweep</h2>
+                        <p>description ....</p>
                         <button type="button">I Did This!</button>
                     </div>
-                    <div class="chore col-md-4">
-                        <p>Sweep</p>
+                    <div class="chore col-md-6">
+                        <h2>Counters</h2>
+                        <p>description ....</p>
                         <button type="button">I Did This!</button>
-                    </div>
-                    <div class="chore col-md-4">
-                        <p>Counters</p>
-                        <button type="button">I Did This!</button>
+                        <button type="button" class="graph">+</button>
+                        <img src="https://www.mathsisfun.com/data/images/bar-chart-example.svg">
                     </div>
                     <div class="add col-md-4">
                         <a href="/chore">+add</button>

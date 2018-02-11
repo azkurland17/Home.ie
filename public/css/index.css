@@ -5,14 +5,33 @@ h1{
     width:100%;
     height:50px;
 }
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.nav{
+    text-align:center;
 }
-li{
-    float:left;
-    margin:10px;
+.nav a{
+    display:inline-block;
+    width:100px;
+    background-color:gray;
+    color:black;
+    border-radius:5px;
+}
+.chore button{
+    position:relative;
+    left:85%;
+    top: -80px;
+    border-radius: 5px;
+}
+.green{
+    background-color: green;
+}
+.yello{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+.chore img{
+    display:none;
 }
 .chore, .add{
     padding:1%;
