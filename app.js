@@ -12,6 +12,7 @@ var index = require('./routes/index');
 var chore = require('./routes/chore');
 var expense = require('./routes/expense');
 var stats = require('./routes/stats');
+var addChore = require('./routes/addChore');
 
 // all environments
 var app = express();
@@ -37,6 +38,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/chore', chore.view);
+app.get('/addChore', addChore.addChore);
 app.get('/expense', expense.view);
 app.get('/stats', stats.view);
 // Example route

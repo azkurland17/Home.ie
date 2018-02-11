@@ -1,0 +1,40 @@
+{
+	"chores": [
+		{
+			"name": "Wash Dishes",
+			"description": "Make sure to rinse the dishes before putting them in the dishwasher",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg",
+			"priority": "low"
+		},
+		{
+			"name": "Take out the trash",
+			"description": "Don't get mad, get Glad",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg",
+			"priority": "low"
+		},
+		{
+			"name": "vacum the house",
+			"description": "Alwasy empty the vac after you use it!!",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg",
+			"priority": "low"
+		},
+		{
+			"name": "Cut the grass",
+			"description": "They collect lawn clipping on tuesdays!",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg",
+			"priority": "low"
+		},
+		{
+			"name": "mop the floors",
+			"description": "Make sure the allow ample time to dry beofre walking over wet tiles!!",
+			"imageURL": "http://amhistory.si.edu/ogmt/images/upload/women-mathematicians/AHB2012q06025.jpg",
+			"priority": "low"
+		},
+		{
+			"name": "wipe down the counters",
+			"description": "Clorax wipes are a great choice, use 409 if needed",
+			"imageURL": "http://uploads.edubilla.com/awards-winners/92/b4/allen-newell.jpg",
+			"priority": "low"
+		}
+	]
+}
