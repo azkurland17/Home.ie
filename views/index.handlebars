@@ -33,8 +33,16 @@
 
                             </div>
                             <div class="done col-sm-3">
-                                {{#if '1==1'}}
-                                <button class="green" type="button">{{priority}}</button>
+                                    <script id="text-template" type="text/x-handlebars-template">
+                                {{#ifequal inventrory 1}}
+                                <button class="green" type="button">{{inventory}}</button>
+                                {{/ifequal}}
+                                </script>
+                                {{#ifequal inventory 2}}
+                                <button class="yellow" type="button">{{inventory}}</button>
+                                {{/ifequal}}
+                                {{#if 'inventory==3'}}
+                                <button class="red" type="button">{{inventory}}</button>
                                 {{/if}}
                             </div>
                         <button type="button" class="expand">+</button>
@@ -64,8 +72,10 @@
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
         <script src="/js/homepage.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/index.js"></script>
+
     </body>
 </html>
