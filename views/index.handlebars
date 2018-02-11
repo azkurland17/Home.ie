@@ -13,12 +13,12 @@
                 <div class="row nav_bar">
                     <div class="col-sm-6">
                         <div class="nav">
-                                <a href="/">Chores</a>
+                                <a id="choresBtn" href="/">Chores</a>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="nav">
-                            <a href="/expense">Expense</a>
+                            <a id="expensesBtn" href="/expense">Expenses</a>
                         </div>
                     </div>
                 </div>
@@ -54,11 +54,11 @@
                     {{/each}}
 
 
-                    {{#each expense}}
+                    {{#each expenses}}
                     <div class="chore col-md-6">
                         <h2>{{name}}</h2>
                         <p>{{description}}</p>
-                        <button class="green" type="button">{{priority}}</button>
+                        <button class="green" type="button">{{inventory}}</button>
                         <button type="button" class="expand">+</button>
                         <img src={{imageURL}}>
                     </div>
