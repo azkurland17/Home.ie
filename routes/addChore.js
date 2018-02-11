@@ -4,8 +4,8 @@ exports.addChore = function(req, res){
 	let chore = {
 		name: req.query.name,
 		description: req.query.description,
-		imageURL: 'https://lorempixel.com/400/400/people'
-    //priority: req.query.priority
+		imageURL: 'http://4.bp.blogspot.com/-gcFUfBFmSKU/ThWcm3ua6zI/AAAAAAAAAHM/Rgj6B4i0R-8/s1600/laundry.gif',
+		priority: req.query.priority
 	}
 
 	console.log("BREAK");

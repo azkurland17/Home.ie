@@ -8,38 +8,43 @@
 </head>
 <body>
 	<div class="container">
-	<form id="signup" data-name="signup" aria-hidden="false" onSubmit={this.handleSubmit}>
+    <form id="addExpenseForm" aria-hidden="false" role="form" method="get" action="/addExpense">
         <legend><h1>Create an Expense</h1></legend>
         <div class="form-group">
             <label for="name">Name of Expense</label>
             <input id="name" class="form-control" name="name" placeholder="garbage bags" />
         </div>
         <div class="form-group">
-            <label for="descripton">Description</label>
-            <input class="form-control" name="descripton" type="text" placeholder="don't get mad, get Glad!!" />
+            <label for="description">Description</label>
+            <input class="form-control" name="description" type="text" placeholder="don't get mad, get Glad!!" />
         </div>
         <div class="form-group">
-            <label for="priority">Priority</label>
+            <label for="inventory">inventory</label>
             <br/>
             <input 
-                type="radio" 
-                name="low" 
+                type="radio"
+                name="inventory" 
+                value="3" 
                 /> Fully Stocked<br/>
             <input 
-                type="radio" 
-                name="med" 
+                type="radio"
+                name="inventory" 
+                value="2" 
                 /> Running low<br/>
             <input 
-                type="radio" 
-                name="hi" 
+                type="radio"
+                name="inventory" 
+                value="1" 
                 /> Out!!<br/>
         </div>
         
         <div class="form-group">
-            <input class="btn btn-default" type="reset" value="Reset" />
-            <input class="btn btn-secondary" type="submit" value="Sign Up" />
+            <input class="btn btn-danger" type="reset" value="Reset" />
+            <input id="submitBtn" class="btn btn-success" value="Add the expense" type="submit" />
         </div>
     </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/js/createExpense.js"></script>
 </body>
 </html>

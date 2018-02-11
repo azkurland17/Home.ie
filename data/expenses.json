@@ -1,40 +1,47 @@
 {
-	"chores": [
+	"expenses": [
 		{
-			"name": "Wash Dishes",
-			"description": "Make sure to rinse the dishes before putting them in the dishwasher",
+			"name": "Toliet Paper",
+			"description": "2 ply or gtfo",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg",
-			"inventory": "1"
+			"priority": "1",
+			"cost": 0.00
+
 		},
 		{
-			"name": "Take out the trash",
+			"name": "trash bags",
 			"description": "Don't get mad, get Glad",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg",
-			"inventory": "1"
+			"priority": "1",
+			"cost": 0.00
 		},
 		{
-			"name": "vacum the house",
-			"description": "Alwasy empty the vac after you use it!!",
+			"name": "clorax wipes",
+			"description": "Lemon scented it lit!!",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg",
-			"inventory": "1"
+			"priority": "1",
+			"cost": 0.00
 		},
 		{
-			"name": "Cut the grass",
-			"description": "They collect lawn clipping on tuesdays!",
+			"name": "dishwasher liquid",
+			"description": "pods are cool too, liquid just seems like it is more effective",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg",
-			"inventory": "1"
+			"priority": "1",
+			"cost": 0.00
 		},
 		{
-			"name": "mop the floors",
-			"description": "Make sure the allow ample time to dry beofre walking over wet tiles!!",
+			"name": "laundry detergent",
+			"description": "You already know we gotta have dem tide pods!!",
 			"imageURL": "http://amhistory.si.edu/ogmt/images/upload/women-mathematicians/AHB2012q06025.jpg",
-			"inventory": "1"
+			"priority": "1",
+			"cost": 0.00
 		},
 		{
-			"name": "wipe down the counters",
-			"description": "Clorax wipes are a great choice, use 409 if needed",
+			"name": "409 spray",
+			"description": "this is NOT the same as Windex",
 			"imageURL": "http://uploads.edubilla.com/awards-winners/92/b4/allen-newell.jpg",
-			"inventory": "1"
+			"priority": "1",
+			"cost": 0.00
 		}
 	]
 }
