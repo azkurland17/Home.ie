@@ -15,6 +15,7 @@ h1{
     color:black;
     border-radius:5px;
 }
+
 .chore button{
     position:relative;
     left:85%;
@@ -31,7 +32,7 @@ h1{
     background-color: red;
 }
 .chore img{
-    display:none;
+    
 }
 .chore, .add{
     padding:1%;

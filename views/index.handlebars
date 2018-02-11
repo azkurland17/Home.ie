@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="nav">
-                                <a href="/expense">Expense</a>
+                            <a href="/expense">Expense</a>
                         </div>
                     </div>
                 </div>
@@ -28,21 +28,20 @@
                         <h2>{{name}}</h2>
                         <p>{{description}}</p>
                         <button class="green" type="button">{{priority}}</button>
-                        <img src="{{imageULR}}">
+                        <img src="{{imageURL}}"/>
+                    </div>
+                    <br>
+                    {{/each}}
+
+                    {{#each expenses}}
+                    <div class="chore col-md-6">
+                        <h2>{{name}}</h2>
+                        <p>{{description}}</p>
+                        <button class="green" type="button">{{inventory}}</button>
+                        <img src="{{imageURL}}">
                     </div>
                     {{/each}}
-                    <div class="chore col-md-6">
-                        <h2>Sweep</h2>
-                        <p>description ....</p>
-                        <button type="button">I Did This!</button>
-                    </div>
-                    <div class="chore col-md-6">
-                        <h2>Counters</h2>
-                        <p>description ....</p>
-                        <button type="button">I Did This!</button>
-                        <button type="button" class="graph">+</button>
-                        <img src="https://www.mathsisfun.com/data/images/bar-chart-example.svg">
-                    </div>
+
                     <div class="add col-md-4">
                         <a href="/chore">+add</button>
                     </div>
