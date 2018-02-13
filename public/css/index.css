@@ -3,6 +3,12 @@
         width: 90%;
     }
 }
+body{
+    background-color: #555;
+}
+#title {
+    color: white
+}
 h1{
     text-align: center;
 }
@@ -16,15 +22,18 @@ h1{
     text-align:center;
 }
 .nav_chore{
+    border-color: white;
+    border-style: solid;
     background-color: black;
     height: 100%;
     border-radius: 5px;
 }
 .nav_expense{
+    background-color: white;
     height: 100%;
     border-radius: 5px;
-    border-top: solid;
-    border-right: solid;
+    border-style: solid;
+    border-color: black;
 }
 .chore_rows{
     background-color: black;
@@ -72,7 +81,6 @@ h1{
 }
 .expand{
     position: relative;
-    top: 10px;
     left: 15%;
     font-size: 40px;
 }
@@ -93,7 +101,11 @@ h1{
 .chore_content, .expense_content{
     padding: 10px;
     border: solid;
+    border-width: thick;
     border-radius: 5px;
+}
+.expense_content{
+    background-color: white;
 }
 
 .add button{
