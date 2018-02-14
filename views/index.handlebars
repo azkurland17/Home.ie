@@ -22,7 +22,7 @@
 
                     <div class="nav_expense col-sm-6">
                         <div class="nav">
-                            <a id="expensesBtn" href="/expense">Expenses</a>
+                            <a id="expensesBtn" href="/addexpense">Expenses</a>
                         </div>
                     </div>
                 </div>
@@ -78,9 +78,17 @@
                     <br>
                     {{/each}}
                 </div>
-                    <div class="add col-md-4">
-                        <form action="/chore" style="text-align: center; position:fixed; bottom:0px; width:100%; left:0px; margin:0px">
-                            <input id="submitBtn" class="btn btn-success btn-block" value="Create New Chore" type="submit" />
+
+                <div class="add col-md-4">
+
+                    {{#if chores}}
+                    <form action="/chore" style="text-align: center; position:fixed; bottom:0px; width:100%; left:0px; margin:0px">
+                        <input id="submitBtn" class="btn btn-success btn-block" value="Create New Chore" type="submit" />
+                        {{/if}}
+                        {{#if expenses}}
+                        <form action="/expense" style="text-align: center; position:fixed; bottom:0px; width:100%; left:0px; margin:0px">
+                            <input id="submitBtn" class="btn btn-success btn-block" value="Create New Expense" type="submit" />
+                            {{/if}}
                         </form>
                     </div>
             </div>
