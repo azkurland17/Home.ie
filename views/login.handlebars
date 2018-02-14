@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Homeie</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+	<div class="loginForm">
+
+<form method="get" action="/homepage">
+	<legend><h1>Login</h1></legend>
+  <div class="container">
+
+   <div class="form-group">
+	    <label for="uname"><b>Username</b></label>
+	    <br>
+	    <input type="text" placeholder="Enter Username" name="uname" required>
+   </div>
+   
+   <div class="form-group">
+    <label for="psw"><b>Password</b></label>
+    <br>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+   </div> 
+
+	<div class="form-group">
+    	<button type="submit">Login</button>
+    </div>
+
+   <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</div>
+</body>
+</html>

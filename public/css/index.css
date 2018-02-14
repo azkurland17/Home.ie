@@ -112,13 +112,12 @@ p{
 }
 .chore_content, .expense_content{
     padding: 10px;
-<<<<<<< HEAD
     border-bottom: solid;
-=======
-    border: solid;
     border-width: thick;
->>>>>>> 0b7285bacfb533605849d4e3ab5fcdb91f4210ce
     border-radius: 5px;
+}
+.card{
+    margin: 10 0 10 0;
 }
 .expense_content{
     background-color: white;
