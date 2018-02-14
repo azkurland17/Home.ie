@@ -3,6 +3,12 @@
         width: 100%;
     }
 }
+body{
+    background-color: #555;
+}
+#title {
+    color: white
+}
 h1{
     text-align: center;
 }
@@ -25,15 +31,21 @@ p{
     text-align:center;
 }
 .nav_chore{
+
     background-color: #cdcdcd;
+
+    border-color: white;
+    border-style: solid;
+
     height: 100%;
     border-radius: 5px;
 }
 .nav_expense{
+    background-color: white;
     height: 100%;
     border-radius: 5px;
-    border-top: solid;
-    border-right: solid;
+    border-style: solid;
+    border-color: black;
 }
 .chore_rows{
     background-color: #cdcdcd;
@@ -81,7 +93,6 @@ p{
 }
 .expand{
     position: relative;
-    top: 10px;
     left: 15%;
     font-size: 40px;
 }
@@ -101,8 +112,16 @@ p{
 }
 .chore_content, .expense_content{
     padding: 10px;
+<<<<<<< HEAD
     border-bottom: solid;
+=======
+    border: solid;
+    border-width: thick;
+>>>>>>> 0b7285bacfb533605849d4e3ab5fcdb91f4210ce
     border-radius: 5px;
+}
+.expense_content{
+    background-color: white;
 }
 
 .add button{

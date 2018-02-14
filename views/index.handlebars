@@ -1,13 +1,15 @@
 <html>
     <head>
-	      <title>Home.ie</title>
+	      <title >Home.ie</title>
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
-        <h1>.Home.ie</h1>
+
+        <h1 id="title">Home.ie</h1>
+
 
         <div class="chores">
             <div class="container">
@@ -26,6 +28,7 @@
                 </div>
                 <div class="chore_rows row">
                     {{#each chores}}
+                    <br>
                     <div class="chore col-md-6">
 
                         <div class="chore_content">
@@ -37,13 +40,13 @@
 
                             </div>
                             <div class="done col-sm-3">
-                                {{#ifequal inventrory 1}}
+                                {{#ifequal priority 1}}
                                 <input id="submitBtn" class="btn btn-success" value="Done" type="submit" />
                                 {{/ifequal}}
-                                {{#ifequal inventory 2}}
+                                {{#ifequal priority 2}}
                                 <input id="submitBtn" class="btn btn-warning" value="Done" type="submit" />
                                 {{/ifequal}}
-                                {{#if 'inventory==3'}}
+                                {{#if 'priority==3'}}
                                 <input id="submitBtn" class="btn btn-danger" value="Done" type="submit" />
                             {{/if}}
                             </div>
