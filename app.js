@@ -14,6 +14,7 @@ var expense = require('./routes/expense');
 var stats = require('./routes/stats');
 var addChore = require('./routes/addChore');
 var addExpense = require('./routes/addExpense');
+var login = require('./routes/login');
 
 // all environments
 var app = express();
@@ -51,12 +52,13 @@ if ('development' == app.get('env')) {
 }
 //might need to add a production code as well
 
-app.get('/', index.view);
+app.get('/', login.view);
 app.get('/chore', chore.view);
 app.get('/addChore', addChore.addChore);
 app.get('/addExpense', addExpense.addExpense);
 app.get('/expense', expense.view);
 app.get('/stats', stats.view);
+app.get('/homepage', index.view);
 // Example route
 // app.get('/users', user.list);
 

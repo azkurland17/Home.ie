@@ -7,8 +7,8 @@ $(document).ready(function() {
 function initializePage(){
    $(".chore img").hide();
     $(".expense img").hide();
-    $(".expand").click(function(e){
+    $(".card").click(function(e){
         e.preventDefault();
-        $(this).parent().parent().find('img').toggle();
+        $(this).find('img').toggle();
     })
 }

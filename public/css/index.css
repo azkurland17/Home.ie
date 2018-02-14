@@ -104,6 +104,9 @@ h1{
     border-width: thick;
     border-radius: 5px;
 }
+.card{
+    margin: 10 0 10 0;
+}
 .expense_content{
     background-color: white;
 }

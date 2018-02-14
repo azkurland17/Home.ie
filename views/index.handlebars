@@ -14,7 +14,7 @@
                 <div class="row nav_bar">
                     <div class="nav_chore col-sm-6">
                         <div class="nav">
-                            <a id="choresBtn" href="/">Chores</a>
+                            <a id="choresBtn" href="/homepage">Chores</a>
                         </div>
                     </div>
 
@@ -26,17 +26,15 @@
                 </div>
                 <div class="chore_rows row">
                     {{#each chores}}
-                    <br>
-                    <div class="chore col-md-6">
+                    <div class="chore col-md-6 card">
 
                         <div class="chore_content">
 
                         <div class="row">
                             <div class="col-sm-9">
-                        <h3>{{name}}</h3>
-                        <p>{{description}}</p>
-
-                            </div>
+                            <h3>{{name}}</h3>
+                            <p>{{description}}</p>
+                        </div>
                             <div class="done col-sm-3">
                                 {{#ifequal priority 1}}
                                 <input id="submitBtn" class="btn btn-success" value="Done" type="submit" />
@@ -48,17 +46,16 @@
                                 <input id="submitBtn" class="btn btn-danger" value="Done" type="submit" />
                             {{/if}}
                             </div>
-                            <button type="button" class="expand">+</button>
+                           
                         </div>
                         <img src="{{imageURL}}">
                         </div>
                     </div>
-                    <br>
                     {{/each}}
                 </div>
                 <div class="expense_rows row">
                     {{#each expenses}}
-                    <div class="expense col-md-6">
+                    <div class="expense col-md-6 card">
                         <div class="expense_content">
                             <div class="row">
                                 <div class="col-sm-9">
@@ -79,12 +76,10 @@
                                     <button class="red" type="button">Done{{inventory}}</button>
                                     {{/if}}
                                 </div>
-                                <button type="button" class="expand">+</button>
                             </div>
                             <img src="{{imageURL}}">
                         </div>
                     </div>
-                    <br>
                     {{/each}}
                     <div class="add col-md-4">
                         <form action="/chore" style="text-align: center">
@@ -97,9 +92,7 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
-        <script src="/js/homepage.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/index.js"></script>
-
     </body>
 </html>

@@ -1,6 +1,5 @@
 var expensesDB = require("../data/expenses.json");
 exports.addExpense = function(req, res){
- 	
 	let expense = {	
 		name: req.query.name,
 		description: req.query.description,
