@@ -48,11 +48,8 @@ p{
     border-color: black;
 }
 .chore_rows{
-    background-color: #cdcdcd;
     color: black;
-    width: 100%;
     position: relative;
-    left: 15px;
 }
 
 
@@ -115,6 +112,7 @@ p{
     border-bottom: solid;
     border-width: thick;
     border-radius: 5px;
+    background-color: #cdcdcd;
 }
 .card{
     margin: 10 0 10 0;
