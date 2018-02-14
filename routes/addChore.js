@@ -11,6 +11,8 @@ exports.addChore = function(req, res){
 	console.log("BREAK");
 	console.log("the Chore to push is ", chore);
 	console.log("BREAK");
+	if(req.query.name){
 	choresDB.chores.push(chore);
+	}
 	res.render("index", choresDB);
 }

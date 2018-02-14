@@ -7,41 +7,6 @@
 			"inventory": "1",
 			"cost": 0.00
 
-		},
-		{
-			"name": "trash bags",
-			"description": "Don't get mad, get Glad",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg",
-			"inventory": "1",
-			"cost": 0.00
-		},
-		{
-			"name": "clorax wipes",
-			"description": "Lemon scented it lit!!",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg",
-			"inventory": "1",
-			"cost": 0.00
-		},
-		{
-			"name": "dishwasher liquid",
-			"description": "pods are cool too, liquid just seems like it is more effective",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg",
-			"inventory": "1",
-			"cost": 0.00
-		},
-		{
-			"name": "laundry detergent",
-			"description": "You already know we gotta have dem tide pods!!",
-			"imageURL": "http://amhistory.si.edu/ogmt/images/upload/women-mathematicians/AHB2012q06025.jpg",
-			"inventory": "1",
-			"cost": 0.00
-		},
-		{
-			"name": "409 spray",
-			"description": "this is NOT the same as Windex",
-			"imageURL": "http://uploads.edubilla.com/awards-winners/92/b4/allen-newell.jpg",
-			"inventory": "1",
-			"cost": 0.00
 		}
 	]
 }

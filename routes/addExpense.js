@@ -10,6 +10,8 @@ exports.addExpense = function(req, res){
 	console.log("BREAK");
 	console.log("the expense to push is ", expense);
 	console.log("BREAK");
-	expensesDB.expenses.push(expense);
+	if(req.query.name){
+	expensesDB.expenses.push(expense);	
+	}
 	res.render("index", expensesDB);
 }
