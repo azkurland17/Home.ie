@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
+
         <h1 id="title">Home.ie</h1>
+
 
         <div class="chores">
             <div class="container">
@@ -61,33 +63,21 @@
                                 <div class="col-sm-9">
                                     <h3>{{name}}</h3>
                                     <p>{{description}}</p>
-
                                 </div>
                                 <div class="done col-sm-3">
-                                    <script id="text-template" type="text/x-handlebars-template">
-                                        {{#ifequal inventrory 1}}
-                                        <button class="green" type="button">Done>{{inventory}}</button>
-                                        {{/ifequal}}
-                                    </script>
-                                    {{#ifequal inventory 2}}
-                                    <button class="yellow" type="button">Done>{{inventory}}</button>
-                                    {{/ifequal}}
-                                    {{#if 'inventory==3'}}
-                                    <button class="red" type="button">Done{{inventory}}</button>
-                                    {{/if}}
+                                        <input id="submitBtn" class="btn btn-success" value="Done" type="submit" />
                                 </div>
                             </div>
                             <img src="{{imageURL}}">
                         </div>
                     </div>
                     {{/each}}
+                </div>
                     <div class="add col-md-4">
-                        <form action="/chore" style="text-align: center">
+                        <form action="/chore" style="text-align: center; position:fixed; bottom:0px; width:100%; left:0px; margin:0px">
                             <input id="submitBtn" class="btn btn-success btn-block" value="Create New Chore" type="submit" />
                         </form>
                     </div>
-
-                </div>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
