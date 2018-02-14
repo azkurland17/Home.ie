@@ -44,15 +44,7 @@
                             <p>{{description}}</p>
                         </div>
                             <div class="done col-sm-3">
-                                {{#ifequal priority 1}}
                                 <input id="submitBtn" class="btn btn-success" value="Done" type="submit" />
-                                {{/ifequal}}
-                                {{#ifequal priority 2}}
-                                <input id="submitBtn" class="btn btn-warning" value="Done" type="submit" />
-                                {{/ifequal}}
-                                {{#if 'priority==3'}}
-                                <input id="submitBtn" class="btn btn-danger" value="Done" type="submit" />
-                            {{/if}}
                             </div>
                             <div class="col-sm-12" style="text-align:center">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
