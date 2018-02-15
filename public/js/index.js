@@ -11,4 +11,9 @@ function initializePage(){
         e.preventDefault();
         $(this).find('img').toggle();
     })
+
+    $(".doneBtn").click(function(e){
+        e.preventDefault;
+        $(this).parent().parent().parent().hide();
+    })
 }
