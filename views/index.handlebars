@@ -12,7 +12,7 @@
                 <div class="col-sm-4 nav_icon">
                     <a href="/stats"> <script class="glyphicon glyphicon-object-align-bottom" style="color: white; font-size:50px"></script></a>
                 </div>
-                <h1 class="col-sm-4" id="title">Home.ie</h1>
+                <a href="/addChore"><h1 class="col-sm-4" id="title">Home.ie</h1></a>
                 <div class="col-sm-4 nav_icon">
                     <a href="/"><script class="glyphicon glyphicon-user" style="color: white; font-size:50px"></script></a>
                 </div>
@@ -44,22 +44,14 @@
                             <p>{{description}}</p>
                         </div>
                             <div class="done col-sm-3">
-                                {{#ifequal priority 1}}
-                                <input id="submitBtn" class="btn btn-success" value="Done" type="submit" />
-                                {{/ifequal}}
-                                {{#ifequal priority 2}}
-                                <input id="submitBtn" class="btn btn-warning" value="Done" type="submit" />
-                                {{/ifequal}}
-                                {{#if 'priority==3'}}
-                                <input id="submitBtn" class="btn btn-danger" value="Done" type="submit" />
-                            {{/if}}
+                                <input id="submitBtn" class="btn btn-success doneBtn" value="Done" type="submit" />
                             </div>
                             <div class="col-sm-12" style="text-align:center">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
                             </div>
 
                         </div>
-                        <img src="{{imageURL}}">
+                        <canvas width="400" height="400" id="{{imageURL}}"> </canvas>
                         </div>
                     </div>
                     {{/each}}
@@ -74,13 +66,14 @@
                                     <p>{{description}}</p>
                                 </div>
                                 <div class="done col-sm-3">
-                                        <input id="submitBtn" class="btn btn-success" value="Bought" type="submit"/>
+
+                                        <input id="submitBtn" class="btn btn-success doneBtn" value="Bought" type="submit"/>
                                 </div>
                                 <div class="col-sm-12" style="text-align:center">
                                     <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
                                 </div>
                             </div>
-                            <img src="{{imageURL}}">
+                            <canvas width="400" height="400" id="{{imageURL}}"> </canvas>
                         </div>
                     </div>
                     {{/each}}
@@ -102,6 +95,8 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/index.js"></script>
     </body>

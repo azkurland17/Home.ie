@@ -1,14 +1,28 @@
 <html>
 <head>
-	<title>Homeie</title>
-	
+	  <title>Homeie</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
-<body>
-	<h1>Yo this is the stats page</h1>
+<body style="background-color: white">
+    <div class="container" style="background-color: #555">
+        <div class="row navbar">
+            <div class="col-sm-4 nav_icon">
+                <a href="/stats"> <script class="glyphicon glyphicon-object-align-bottom" style="color: white; font-size:50px"></script></a>
+            </div>
+            <a href="/addChore"> <h1 class="col-sm-4" id="title">Home.ie</h1></a>
+            <div class="col-sm-4 nav_icon">
+                <a href="/"><script class="glyphicon glyphicon-user" style="color: white; font-size:50px"></script></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="graph_content">
+	<h1 style="font-size: 70px">Total Points</h1>
 	<canvas id="myChart" width="400" height="400"></canvas>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-	<script src="js/stats.js"></script>	
+	<script src="js/stats.js"></script>
+    </div>
 </body>
 </html>
-
