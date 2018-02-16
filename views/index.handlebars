@@ -7,11 +7,19 @@
         <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
+        <div class="container">
+            <div class="row navbar">
+                <div class="col-sm-4 nav_icon">
+                    <a href="/stats"> <script class="glyphicon glyphicon-object-align-bottom" style="color: white; font-size:50px"></script></a>
+                </div>
+                <h1 class="col-sm-4" id="title">Home.ie</h1>
+                <div class="col-sm-4 nav_icon">
+                    <a href="/"><script class="glyphicon glyphicon-user" style="color: white; font-size:50px"></script></a>
+                </div>
 
-        <h1 id="title">Home.ie</h1>
-
-
-        <div class="chores">
+            </div>
+        </div>
+            <div class="chores">
             <div class="container">
                 <div class="row nav_bar">
                     <div class="nav_chore col-sm-6">
@@ -29,9 +37,7 @@
                 <div class="chore_rows row">
                     {{#each chores}}
                     <div class="chore col-md-6 card">
-
                         <div class="chore_content">
-
                         <div class="row">
                             <div class="col-sm-9">
                             <h3>{{name}}</h3>
@@ -48,7 +54,10 @@
                                 <input id="submitBtn" class="btn btn-danger" value="Done" type="submit" />
                             {{/if}}
                             </div>
-                           
+                            <div class="col-sm-12" style="text-align:center">
+                                <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
+                            </div>
+
                         </div>
                         <img src="{{imageURL}}">
                         </div>
@@ -66,6 +75,9 @@
                                 </div>
                                 <div class="done col-sm-3">
                                         <input id="submitBtn" class="btn btn-success" value="Bought" type="submit"/>
+                                </div>
+                                <div class="col-sm-12" style="text-align:center">
+                                    <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
                                 </div>
                             </div>
                             <img src="{{imageURL}}">

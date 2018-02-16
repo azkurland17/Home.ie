@@ -5,11 +5,10 @@
 	<link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-	<div class="loginForm">
+	<div class="loginForm container">
 
 <form method="get" action="/homepage">
-	<legend><h1>Login</h1></legend>
-  <div class="container">
+	<legend><h1 id="LoginTitle">Login</h1></legend>
 
    <div class="form-group">
 	    <label for="uname"><b>Username</b></label>
@@ -24,18 +23,17 @@
    </div> 
 
 	<div class="form-group">
-    	<button type="submit">Login</button>
+    	<button class="loginBtn"type="submit">Login</button>
+      <button class="loginBtn" type="button" class="cancelbtn">Cancel</button>
     </div>
 
    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
+      <input id="rememberId" type="checkbox" checked="checked" name="remember"> Remember me </input>
+      <br>
+      <span class="psw"> <a href="#">Forgot password?</a></span>
     </label>
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
 </form>
 </div>
 </body>
