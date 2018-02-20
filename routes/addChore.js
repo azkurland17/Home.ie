@@ -1,4 +1,5 @@
 var choresDB = require("../data/chores.json");
+
 exports.addChore = function(req, res){
 
 	let chore = {
@@ -14,5 +15,6 @@ exports.addChore = function(req, res){
 	if(req.query.name){
 	choresDB.chores.push(chore);
 	}
+	
 	res.render("index", choresDB);
 }

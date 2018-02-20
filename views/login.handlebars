@@ -25,7 +25,7 @@
    </div> 
 
 	<div class="form-group">
-    	<button class="loginBtn"type="submit">Login</button>
+    	<button class="loginBtn" type="submit">Login</button>
       <button class="loginBtn" type="button" class="cancelbtn">Cancel</button>
     </div>
 
@@ -34,9 +34,14 @@
       <br>
       <span class="psw"> <a href="#">Forgot password?</a></span>
     </label>
+    <fb:login-button scope="public_profile,email" onLogin="checkLoginState();"></fb:login-button>
   </div>
 
 </form>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="application/json" src="../data/users.json"></script>
+{{> facebook}}
+<script type="text/javascript" src="js/facebook.js"></script>
 </body>
 </html>

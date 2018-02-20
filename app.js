@@ -15,6 +15,7 @@ var stats = require('./routes/stats');
 var addChore = require('./routes/addChore');
 var addExpense = require('./routes/addExpense');
 var login = require('./routes/login');
+var addUser = require('./routes/addUser');
 
 // all environments
 var app = express();
@@ -59,6 +60,7 @@ app.get('/addExpense', addExpense.addExpense);
 app.get('/expense', expense.view);
 app.get('/stats', stats.view);
 app.get('/homepage', index.view);
+app.post('/addUser', addUser.addUser);
 // Example route
 // app.get('/users', user.list);
 
