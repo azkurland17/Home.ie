@@ -116,7 +116,8 @@ body{
     left: 25%;
 }
 .chore_content, .expense_content{
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-bottom: solid;
     border-width: thick;
     border-radius: 5px;
@@ -126,21 +127,33 @@ body{
     margin: 10 0 10 0;
 }
 .doneBtn{
-
+    font-size: 20px;
 }
 
 .boughtBtn{
     text-align: center;
-    padding-right: 3%;
+    //padding-right: 3%;
     text-align: center;
+    position:relative;
+    //left: -15px;
+    font-size: 20px;
 }
 
 #submitBtn{
+    width: 96%;
+    left: 1%;
+    text-align: center;
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    font-size: 20px;
+    /*
     width: 100%;
-    text-align: center; 
+    text-align: center;
     position: fixed;
     bottom: 2%;
     left: 0%;
+*/
 }
 .expense_content{
     background-color: white;
