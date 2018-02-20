@@ -18,6 +18,13 @@ function initializePage(){
         e.preventDefault;
         $(this).parent().parent().parent().hide();
     })
+
+    $(".boughtBtn").click(function(e){
+        e.preventDefault;
+        $(this).parent().parent().parent().hide();
+    })
+
+    
 }
 function makeChart(graphId){
 var graph = document.getElementById(graphId);

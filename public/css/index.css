@@ -7,81 +7,61 @@ body{
     background-color: #555;
 }
 #title {
-    color: white
+    color: white;
+    padding: 0 3% 0 0;
 }
-h1{
-    text-align: center;
-    font-size:50px;
-}
-h3{
-    font-size: 30px;
-}
-p{
-    font-size: 23px;
-}
-.btn{
-    font-size: 30px;
-}
+
 .navbar{
     margin-bottom: 20px;
+    text-align:center;
 }
+.nav{
+    text-align: center;
+}
+
 .nav_icon{
     margin-top: 20px;
     text-align: center;
 }
 .nav_bar{
     width:100%;
-    height:65px;
     position:relative;
     left:15px;
 }
-.nav{
-    text-align:center;
-}
 .nav_chore{
-
     background-color: #cdcdcd;
-
     border-color: white;
     border-style: solid;
-
-    height: 100%;
     border-radius: 5px;
 }
 .nav_expense{
     background-color: white;
-    height: 100%;
     border-radius: 5px;
     border-style: solid;
     border-color: black;
 }
 .chore_rows{
     color: black;
-    position: relative;
 }
 
 
 #choresBtn {
     display:inline-block;
-    width:300px;
     background-color: #cdcdcd;
     color: black;
-    font-size: 40px;
 /*
     border-style: solid;
     border-color: white;
     border-width:2px;
 */
-   // border-radius:25px;
    border-radius: 5px;
+   width: 100%;
 }
 
 #expensesBtn {
     display:inline-block;
-    width:300px;
     background-color: white;
     color: black;
-    font-size: 40px;
 
     /*border-style: solid;
     border-color: black;
@@ -89,6 +69,7 @@ p{
 */
 //    border-radius:25px;
     border-radius: 5px;
+    width: 100%;
 }
 
 .done{
@@ -99,7 +80,6 @@ p{
 .expand{
     position: relative;
     left: 15%;
-    font-size: 40px;
 }
 .green{
     background-color: green;
@@ -125,12 +105,29 @@ p{
 .card{
     margin: 10 0 10 0;
 }
+.doneBtn{
+
+}
+
+.boughtBtn{
+    text-align: center;
+    padding-right: 3%;
+    text-align: center;
+}
+
+#submitBtn{
+    width: 100%;
+    text-align: center; 
+    position: fixed;
+    bottom: 2%;
+    left: 0%;
+}
 .expense_content{
     background-color: white;
 }
 
-.add button{
-    height:55px;
+.add {
+    text-align: center;
 }
 /*
 .chores{

@@ -1,75 +1,79 @@
 <html>
     <head>
-	      <title >Home.ie</title>
-
-
+	    <title >Home.ie</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
         <div class="container">
             <div class="row navbar">
-                <div class="col-sm-4 nav_icon">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
                     <a href="/stats"> <script class="glyphicon glyphicon-object-align-bottom" style="color: white; font-size:50px"></script></a>
                 </div>
-                <a href="/addChore"><h1 class="col-sm-4" id="title">Home.ie</h1></a>
+
+                <a href="/addChore"><h1 class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="title">Home.ie</h1></a>
+                
                 <div class="col-sm-4 nav_icon">
                     <a href="/"><script class="glyphicon glyphicon-user" style="color: white; font-size:50px"></script></a>
                 </div>
-
             </div>
-        </div>
-            <div class="chores">
-            <div class="container">
-                <div class="row nav_bar">
-                    <div class="nav_chore col-sm-6">
-                        <div class="nav">
-                            <a id="choresBtn" href="/homepage">Chores</a>
-                        </div>
+
+            <div class="row nav_bar">                
+                    <div class="nav_chore col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <a id="choresBtn" href="/homepage">
+                            <div class="nav">
+                                Chores
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="nav_expense col-sm-6">
-                        <div class="nav">
-                            <a id="expensesBtn" href="/addexpense">Expenses</a>
-                        </div>
+                    <div class="nav_expense col-sm-6 col-xs-6 col-md-6 col-lg-6">
+                        <a id="expensesBtn" href="/addexpense">
+                            <div class="nav">
+                                Expenses
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="chore_rows row">
+            </div>
+            
+                <div class="chore_rows row ">
                     {{#each chores}}
-                    <div class="chore col-md-6 card">
+                    <div class="chore col-xs-12 col-sm-12 col-md-12 col-lg-12 card">
                         <div class="chore_content">
                         <div class="row">
-                            <div class="col-sm-9">
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                             <h3>{{name}}</h3>
                             <p>{{description}}</p>
                         </div>
-                            <div class="done col-sm-3">
-                                <input id="submitBtn" class="btn btn-success doneBtn" value="Done" type="submit" />
+                            <div class="done col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <button class="btn btn-success doneBtn" type="submit">Done</button>
                             </div>
-                            <div class="col-sm-12" style="text-align:center">
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
                                 <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
                             </div>
-
                         </div>
                         <canvas width="400" height="400" id="{{imageURL}}"> </canvas>
                         </div>
                     </div>
                     {{/each}}
                 </div>
+
                 <div class="expense_rows row">
                     {{#each expenses}}
-                    <div class="expense col-md-6 card">
+                    <div class="expense col-xs-12 col-sm-12 col-md-12 col-lg-12 card">
                         <div class="expense_content">
                             <div class="row">
-                                <div class="col-sm-9">
+                                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                                     <h3>{{name}}</h3>
                                     <p>{{description}}</p>
                                 </div>
-                                <div class="done col-sm-3">
-
-                                        <input id="submitBtn" class="btn btn-success doneBtn" value="Bought" type="submit"/>
+                                <div class="done col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                    <button class="btn btn-success boughtBtn" type="submit">Bought</button>
                                 </div>
-                                <div class="col-sm-12" style="text-align:center">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align:center">
                                     <span class="glyphicon glyphicon-chevron-down" style="font-size:30px"></span>
                                 </div>
                             </div>
@@ -79,19 +83,18 @@
                     {{/each}}
                 </div>
 
-                <div class="add col-md-4">
-
+                <div class="add col-xs-10 col-sm-10 col-md-10 col-lg-10">
                     {{#if chores}}
-                    <form action="/chore" style="text-align: center; position:fixed; bottom:0px; width:100%; left:0px; margin:0px">
-                        <input id="submitBtn" class="btn btn-success btn-block" value="Create New Chore" type="submit" />
-                        {{/if}}
-                        {{#if expenses}}
-                        <form action="/expense" style="text-align: center; position:fixed; bottom:0px; width:100%; left:0px; margin:0px">
-                            <input id="submitBtn" class="btn btn-success btn-block" value="Create New Expense" type="submit" />
-                            {{/if}}
-                        </form>
-                    </div>
-            </div>
+                    <form action="/chore" >
+                        <button id="submitBtn" class="btn btn-success btn-block" type="submit"> Create New Chore </button>
+                    {{/if}}
+                        
+                    {{#if expenses}}
+                    <form action="/expense">
+                        <button id="submitBtn" class="btn btn-success btn-block" type="submit" > Create New Expense</button>
+                    {{/if}}
+                    </form>
+                </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
