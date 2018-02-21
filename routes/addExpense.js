@@ -1,4 +1,5 @@
-var expensesDB = require("../data/expenses.json");
+var jasonDB = require("../data/DB.json");
+
 exports.addExpense = function(req, res){
 	let expense = {
 		name: req.query.name,
@@ -11,7 +12,7 @@ exports.addExpense = function(req, res){
 	console.log("the expense to push is ", expense);
 	console.log("BREAK");
 	if(req.query.name){
-	expensesDB.expenses.push(expense);	
+	jasonDB.expenses.push(expense);	
 	}
-	res.render("index", expensesDB);
+	res.render('expenseHomepage', jasonDB);
 }

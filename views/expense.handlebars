@@ -9,20 +9,27 @@
     <body>
         <div class="container">
             <div class="row navbar">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
+                <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon">
                     <a href="/stats"> <script class="glyphicon glyphicon-object-align-bottom" style="color: white; font-size:50px"></script></a>
-                </div>
-                    <a href="/addChore"><h1 class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="title">Home.ie</h1></a>
+                </li>
 
-                <div class="col-sm-4 nav_icon">
+                <li><a href="/addChore"><h1 class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="title">Home.ie</h1></a></li>
+
                     {{#if users}}
-                    <a href="/"><img src="{{users.0.url}}"></a>
+                    <li class=" col-xs-4 col-sm-4 col-md-4 col-lg-4 nav_icon dropdown pull-right">
+                        <a  data-toggle="dropdown" class="dropdown-toggle"><img id="fbProfilePic" src="{{users.0.url}}"><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">link1</a></li>
+                            <li><a href="#">link2</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/">Sign Off</a></li>
+                        </ul>
+                    </li>
                     {{else}}
-                    <a id="defaultProfile" href="/"><script class="glyphicon glyphicon-user"></script></a>
+                    <a id="defaultProfile" href="/"><script class="glyphicon glyphicon-user" ></script></a>
                     {{/if}}
-                </div>
-                
             </div>
+
 
             <div class="row nav_bar">                
                     <div class="nav_chore col-sm-6 col-xs-6 col-md-6 col-lg-6">

@@ -1,4 +1,4 @@
-var choresDB = require("../data/chores.json");
+var jasonDB = require("../data/DB.json");
 
 exports.addChore = function(req, res){
 
@@ -12,9 +12,10 @@ exports.addChore = function(req, res){
 	console.log("BREAK");
 	console.log("the Chore to push is ", chore);
 	console.log("BREAK");
+	
 	if(req.query.name){
-	choresDB.chores.push(chore);
+	jasonDB.chores.push(chore);
 	}
 	
-	res.render("index", choresDB);
+	res.render("index", jasonDB);
 }

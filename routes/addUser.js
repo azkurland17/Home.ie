@@ -14,7 +14,6 @@ exports.addUser = function(req, res){
 	if(req.body.name){
 		jasonDB.users.push(user);
 	}
-	console.log("this is the users array", jasonDB);
 	res.render("index", jasonDB);
 
 }
