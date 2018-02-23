@@ -11,17 +11,17 @@ function initializePage(){
         makeChart(graphId);
         $(this).find('canvas').toggle();
     })
-
     $(".doneBtn").click(function(e){
         e.preventDefault();
-        let name = $("#fbProfilePic").attr('user');
-        console.log("the name is", name);
-
+        e.stopPropagation();
         $(this).parent().parent().parent().toggleClass('chore_content doneGray');
-        $(this).html("Revive");
-        $(this).toggleClass('doneBtn reviveBtn');
         $(this).toggleClass('btn-success btn-danger');
-        
+        let name = $("#fbProfilePic").attr('user');
+        console.log("what is the text?", $(this).text());
+        if ($(this).text() == "Done"){
+            $(this).text("Revive");
+            $(this).toggleClass('doneBtn reviveBtn');
+
         if(name == 'Karanbir'){
             let pts = $('.chore_rows').find('canvas').attr('Karanbir');
             pts++;
@@ -46,24 +46,28 @@ function initializePage(){
             pts++;
             $('.chore_rows').find('canvas').attr('guest', pts);
         }
-        makeChart($('.chore_rows').find('canvas').attr('id'));
-        //console.log($(this).parent().parent().find('canvas').attr('id'))
-    })
+            makeChart($('.chore_rows').find('canvas').attr('id'));
+        }
+        else{
+
+            $(this).text("Done");
+        };
+
+        //TODO: REMOVE FROM THE DATABSE!!!
+    });
 
     $(".reviveBtn").click(function (e){
-        e.preventDefault();
-        $(this).toggleClass(`btn-danger btn-success`);
-        $(this).parent().parent().parent().toggleClass('doneGray chore_content');
-        $(this).toggleClass(`reviveBtn doneBtn`);
-        $(this).html("Done");
-    })
+        if ($(this).text() == "Revive"){
+            $(this).text("Done");
+            $(this).toggleClass('reviveBtn doneBtn');
+            $(this).toggleClass('btn-danger btn-success');
+        }
+    });
 
     $(".boughtBtn").click(function(e){
         e.preventDefault;
         $(this).parent().parent().parent().hide();
-    })
-
-    
+    });
 }
 function makeChart(graphId){
 var graph = document.getElementById(graphId);
