@@ -5,7 +5,7 @@ $(document).ready(function() {
 })
 
 function initializePage(){
-   $(".chore canvas").hide();
+    $(".chore_content canvas").hide();
     $(".expense canvas").hide();
     $(".card").click(function(e){
         e.preventDefault();
@@ -16,28 +16,38 @@ function initializePage(){
 
     $(".doneBtn").click(function(e){
         e.preventDefault();
+        e.stopPropagation();
         $(this).parent().parent().parent().toggleClass('chore_content doneGray');
-        $(this).html("Revive");
         $(this).toggleClass('doneBtn reviveBtn');
         $(this).toggleClass('btn-success btn-danger');
-
-        //get rid of it from the json file. 
+        if ($(this).text() == "Done"){
+            $(this).text("Revive");
+        }else{
+            $(this).text("Done");
+        };
+//        $('.chore_rows').append($(this).parent().parent().parent());
+//        $(this).parent().parent().parent().append($('.chore_rows'))
+        //get rid of it from the json file.
     })
 
+/*
     $(".reviveBtn").click(function (e){
         e.preventDefault();
-        $(this).toggleClass(`btn-danger btn-success`);
         $(this).parent().parent().parent().toggleClass('doneGray chore_content');
-        $(this).toggleClass(`reviveBtn doneBtn`);
-        $(this).html("Done");
+        $(this).toggleClass(`doneBtn reviveBtn`);
+        $(this).toggleClass(`btn-danger btn-success`);
+
+//        $(this).text("Done");
+
     })
+    */
 
     $(".boughtBtn").click(function(e){
         e.preventDefault;
         $(this).parent().parent().parent().hide();
     })
 
-    
+
 }
 function makeChart(graphId){
 var graph = document.getElementById(graphId);
