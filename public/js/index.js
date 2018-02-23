@@ -14,6 +14,8 @@ function initializePage(){
     $(".doneBtn").click(function(e){
         e.preventDefault();
         e.stopPropagation();
+        let idx = $(this).attr('index');
+        let id = '#' + idx;
         $(this).parent().parent().parent().toggleClass('chore_content doneGray');
         $(this).toggleClass('btn-success btn-danger');
         let name = $("#fbProfilePic").attr('user');
@@ -23,30 +25,30 @@ function initializePage(){
             $(this).toggleClass('doneBtn reviveBtn');
 
         if(name == 'Karanbir'){
-            let pts = $('.chore_rows').find('canvas').attr('Karanbir');
+            let pts = $(id).attr('Karanbir');
             pts++;
-            $('.chore_rows').find('canvas').attr('Karanbir', pts);
+            $(id).attr('Karanbir', pts);
         } else if(name == 'Alex'){
             
-            let pts = $('.chore_rows').find('canvas').attr('Alex');
+            let pts = $(id).attr('Alex');
             pts++;
-            $('.chore_rows').find('canvas').attr('Alex', pts);
+            $(id).attr('Alex', pts);
         } else if(name == 'Youxi'){
             
-            let pts = $('.chore_rows').find('canvas').attr('Youxi');
+            let pts = $(id).attr('Youxi');
             pts++;
-            $('.chore_rows').find('canvas').attr('Youxi', pts);
+            $(id).attr('Youxi', pts);
         } else if(name == 'All'){
             
-            let pts = $('.chore_rows').find('canvas').attr('All');
+            let pts = $(id).attr('All');
             pts++;
-            $('.chore_rows').find('canvas').attr('All', pts);
+            $(id).attr('All', pts);
         }else{
-            let pts = $('.chore_rows').find('canvas').attr('guest');
+            let pts = $(id).attr('guest');
             pts++;
-            $('.chore_rows').find('canvas').attr('guest', pts);
+            $(id).attr('guest', pts);
         }
-            makeChart($('.chore_rows').find('canvas').attr('id'));
+            makeChart($(id).attr('id'));
         }
         else{
 
@@ -94,7 +96,7 @@ var myChart = new Chart(ctx, {
     data: {
         labels: label,
         datasets: [{
-            label: '# of Votes',
+            label: '# of Points',
             data: datas,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
