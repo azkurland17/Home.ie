@@ -1,12 +1,10 @@
-'use strict';
-
+'use strict';   
 $(document).ready(function() {
-	  initializePage();
+      initializePage();
 })
 
 function initializePage(){
    $(".chore canvas").hide();
-    $(".expense canvas").hide();
     $(".card").click(function(e){
         e.preventDefault();
         var graphId = $(this).find('canvas').attr("id");
@@ -16,12 +14,40 @@ function initializePage(){
 
     $(".doneBtn").click(function(e){
         e.preventDefault();
+        let name = $("#fbProfilePic").attr('user');
+        console.log("the name is", name);
+
         $(this).parent().parent().parent().toggleClass('chore_content doneGray');
         $(this).html("Revive");
         $(this).toggleClass('doneBtn reviveBtn');
         $(this).toggleClass('btn-success btn-danger');
-
-        //get rid of it from the json file. 
+        
+        if(name == 'Karanbir'){
+            let pts = $('.chore_rows').find('canvas').attr('Karanbir');
+            pts++;
+            $('.chore_rows').find('canvas').attr('Karanbir', pts);
+        } else if(name == 'Alex'){
+            
+            let pts = $('.chore_rows').find('canvas').attr('Alex');
+            pts++;
+            $('.chore_rows').find('canvas').attr('Alex', pts);
+        } else if(name == 'Youxi'){
+            
+            let pts = $('.chore_rows').find('canvas').attr('Youxi');
+            pts++;
+            $('.chore_rows').find('canvas').attr('Youxi', pts);
+        } else if(name == 'All'){
+            
+            let pts = $('.chore_rows').find('canvas').attr('All');
+            pts++;
+            $('.chore_rows').find('canvas').attr('All', pts);
+        }else{
+            let pts = $('.chore_rows').find('canvas').attr('guest');
+            pts++;
+            $('.chore_rows').find('canvas').attr('guest', pts);
+        }
+        makeChart($('.chore_rows').find('canvas').attr('id'));
+        //console.log($(this).parent().parent().find('canvas').attr('id'))
     })
 
     $(".reviveBtn").click(function (e){
@@ -41,15 +67,31 @@ function initializePage(){
 }
 function makeChart(graphId){
 var graph = document.getElementById(graphId);
+var id = '#' + graphId;
+var kb = $(id).attr('Karanbir');
+var alex = $(id).attr('Alex');
+var allDee = $(id).attr('All');
+var youxi = $(id).attr('Youxi');
+var guest = $(id).attr('guest');
 var ctx = graph.getContext('2d');
-console.log("This is the value returned from getElementByClassName",ctx);
+let name = $("#fbProfilePic").attr('user');
+let label = [];
+let datas = [];
+if(name == 'Karanbir' || name == 'Youxi' || name == "All" || name == "Alex"){
+    label = ["All", "KB", "Youxi", "Alex"];
+    datas = [allDee, kb, youxi, alex];
+}else{
+    label =["All", "KB", "Youxi", "Alex", name]; 
+    datas = [allDee, kb, youxi, alex, guest];
+}
+
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["All", "KB", "Youxi", "Alex"],
+        labels: label,
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5],
+            data: datas,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
