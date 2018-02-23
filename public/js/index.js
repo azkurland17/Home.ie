@@ -18,18 +18,18 @@ function initializePage(){
         e.preventDefault();
         $(this).parent().parent().parent().toggleClass('chore_content doneGray');
         $(this).html("Revive");
-        $(this).toggleClass(`doneBtn reviveBtn`);
-        $(this).toggleClass(`btn-success btn-danger`);
+        $(this).toggleClass('doneBtn reviveBtn');
+        $(this).toggleClass('btn-success btn-danger');
 
         //get rid of it from the json file. 
     })
 
     $(".reviveBtn").click(function (e){
         e.preventDefault();
-        $(this).html("Done");
         $(this).toggleClass(`btn-danger btn-success`);
         $(this).parent().parent().parent().toggleClass('doneGray chore_content');
         $(this).toggleClass(`reviveBtn doneBtn`);
+        $(this).html("Done");
     })
 
     $(".boughtBtn").click(function(e){

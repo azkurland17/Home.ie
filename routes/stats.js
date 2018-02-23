@@ -1,3 +1,5 @@
+var jasonDB = require("../data/DB.json");
+
 exports.view = function(req, res){
-  res.render('stats');
+  res.render('stats', jasonDB);
 };

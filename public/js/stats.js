@@ -5,7 +5,7 @@ var myChart = new Chart(ctx, {
         labels: ["All", "KB", "Youxi", "Alex"],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5],
+            data: [11, 19, 3, 5],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
